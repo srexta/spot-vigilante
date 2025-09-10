@@ -30,14 +30,5 @@ export function verifyToken(token: string): UserPayload | null {
   }
 }
 
-export async function getUserFromToken(token: string) {
-  const payload = verifyToken(token)
-  if (!payload) return null
-
-  const user = await prisma.user.findUnique({
-    where: { id: payload.id },
-    select: { id: true, email: true, name: true }
-  })
-
-  return user
-}
+// Note: getUserFromToken function removed since User model was removed from schema
+// Authentication is now handled via simple password protection in admin dashboard
