@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/spot_vigilante
+      - JWT_SECRET=your-super-secret-jwt-key-here
+      - CLOUDINARY_CLOUD_NAME=your-cloud-name
+      - CLOUDINARY_API_KEY=your-api-key
+      - CLOUDINARY_API_SECRET=your-api-secret
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=spot_vigilante
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
