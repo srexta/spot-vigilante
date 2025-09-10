@@ -64,7 +64,7 @@ export default function AdminPage() {
   const [sortOrder, setSortOrder] = useState<string>('desc')
 
   // Admin password from environment variable
-  const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'spotvigilante2024admin'
+  const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_LOGIN || 'spotvigilante2024admin'
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()

@@ -58,7 +58,7 @@ JWT_SECRET=your-super-secret-jwt-key-here-change-this-in-production-12345
 CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
 CLOUDINARY_API_KEY=your_cloudinary_api_key
 CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-NEXT_PUBLIC_ADMIN_PASSWORD=spotvigilante2024admin
+NEXT_PUBLIC_ADMIN_LOGIN=spotvigilante2024admin
 NEXT_PUBLIC_APP_URL=https://your-app-name.vercel.app
 ```
 
@@ -97,7 +97,7 @@ After deployment, update the `NEXT_PUBLIC_APP_URL` environment variable in Verce
 | `CLOUDINARY_CLOUD_NAME` | Your Cloudinary cloud name | `your_cloud_name` |
 | `CLOUDINARY_API_KEY` | Your Cloudinary API key | `123456789012345` |
 | `CLOUDINARY_API_SECRET` | Your Cloudinary API secret | `your_api_secret` |
-| `NEXT_PUBLIC_ADMIN_PASSWORD` | Admin dashboard password | `spotvigilante2024admin` |
+| `NEXT_PUBLIC_ADMIN_LOGIN` | Admin dashboard password | `spotvigilante2024admin` |
 | `NEXT_PUBLIC_APP_URL` | Your Vercel app URL | `https://your-app.vercel.app` |
 
 ## Troubleshooting
@@ -114,7 +114,7 @@ After deployment, update the `NEXT_PUBLIC_APP_URL` environment variable in Verce
    - Check CLOUDINARY_* environment variables
 
 3. **Admin Access Issues**:
-   - Verify NEXT_PUBLIC_ADMIN_PASSWORD is set
+   - Verify NEXT_PUBLIC_ADMIN_LOGIN is set
    - Check admin URL: `/findspotvigilanteadminusage`
 
 4. **Build Errors**:
